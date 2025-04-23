@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
@@ -20,12 +21,11 @@ const Navbar = () => {
             to="/" 
             className={`nav-link ${currentPath === '/' ? 'active' : ''}`}
           >
-            Accueil
+            Catégories
           </Link>
           <Link to="/add/category" className="nav-link">Ajouter Catégorie</Link>
-      <Link to="/add/film" className="nav-link">Ajouter Film</Link>
-      <Link to="/add/serie" className="nav-link">Ajouter Série</Link>
-    
+          <Link to="/add/film" className="nav-link">Ajouter Film</Link>
+          <Link to="/add/serie" className="nav-link">Ajouter Série</Link>
         </div>
       </div>
     </nav>

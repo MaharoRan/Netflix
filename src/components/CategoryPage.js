@@ -48,6 +48,8 @@ const CategoryPage = () => {
 
   return (
     <div className="category-page">
+      <br></br>
+      <br></br>
       <h1>Médias de la catégorie {id}</h1>
       <h2>Films</h2>
       <div className="media-count">Nombre de films: {films?.length || 0}</div>

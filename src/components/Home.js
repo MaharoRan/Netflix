@@ -38,7 +38,9 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Catégories</h1>
+      <br></br>
+      <br></br>
+      <h1>Explorer les catégories</h1>
       <CategoryList 
         categories={categories} 
         onDelete={handleDelete}
