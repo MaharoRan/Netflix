@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* src/App.css */
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #141414;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  padding-top: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.category-item {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+.media-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.media-item {
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.media-item:hover {
+  transform: scale(1.02);
+}
+
+.media-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.media-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.media-year,
+.media-duration,
+.media-episodes,
+.media-actors {
+  color: #777;
+}
+
+.media-actors {
+  max-height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.navbar {
+  background-color: #141414;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #e50914;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #141414;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: #e50914;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #222;
+  color: #e50914;
+}
+
+.nav-link.active {
+  background-color: #222;
+  color: #e50914;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* App.css */
+.media-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.media-card-content {
+  padding: 1.5rem;
+}
+
+.media-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.media-card-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #e50914;
+}
+
+.media-card-type {
+  background-color: #222;
+  color: #777;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.media-card-details {
+  margin-bottom: 1.5rem;
+}
+
+.media-card-details p {
+  margin: 0.5rem 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.media-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.media-card-play {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.media-card-play:hover {
+  background-color: #f40612;
+}
+
+@media (max-width: 768px) {
+  .media-card {
+    margin-bottom: 1rem;
   }
 }
