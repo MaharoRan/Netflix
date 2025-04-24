@@ -7,7 +7,7 @@ const CategoryItem = ({ category, onDelete }) => {
     if (window.confirm('Êtes-vous sûr de vouloir supprimer cette catégorie ?')) {
       try {
         await axios.delete(`/categories/${category.id}`);
-        onDelete(category.idCategorie);
+        onDelete(category.id);
       } catch (error) {
         console.error('Erreur lors de la suppression:', error);
       }
