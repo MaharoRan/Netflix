@@ -38,7 +38,7 @@ const MediaItem = ({ item, onDelete }) => {
         </button>
       </div>
           <h4>{item.titre}</h4>
-            <p className="media-year">{item.dateSortie}</p>
+            <p className="media-year"> {item.dateSortie}</p>
             {isFilm && (
               <p className="media-duration">Durée: {item.duree} min</p>
             )}

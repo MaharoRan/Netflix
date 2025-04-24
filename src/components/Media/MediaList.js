@@ -1,4 +1,4 @@
-// src/components/Media/MediaList.js
+
 import React from 'react';
 import MediaItem from './MediaItem';
 

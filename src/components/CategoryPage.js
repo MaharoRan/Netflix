@@ -1,12 +1,11 @@
-// src/components/CategoryPage.js
+
 import React, { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import MediaList from './Media/MediaList';
 import { fetchFilmsByCategory, fetchSeriesByCategory } from '../services/api';
 
 const CategoryPage = () => {
   const { id } = useParams();
-  const location = useLocation();
   const [films, setFilms] = useState([]);
   const [series, setSeries] = useState([]);
   const [loading, setLoading] = useState(true);

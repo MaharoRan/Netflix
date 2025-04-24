@@ -1,4 +1,4 @@
-// src/components/Category/CategoryList.js
+
 import React from 'react';
 import CategoryItem from './CategoryItem';
 
